@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example With Validation
+    </title>
+</head>
+<body>
+    <div>
+        <form >
+            <div class="error_msg" style="display: none;"></div>
+           // <div class="success_msg" style="display: none;"></div>
+            </div>
+            <div class="Form_element">
+                <input type="text" id="first_name" placeholder="First Name">
+            </div>
+            <div class="Form_element">
+                <input type="text" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="form_element">
+                <select id="course_name">
+                    <option value="">SELECT COURSE</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="MERN">MERN</option>
+                    <option value="MEVN">MEVN</option>
+                </select>
+
+            </div>
+            <div>
+                <input type="radio" name="shift" id="shift_1" value="Morning">Morning
+                <input type="radio" name="shift" id="shift_2" value="Morning">Evening
+            </div>
+
+            <div>
+                <textarea  id="address" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form_element">
+                <input type="checkbox" id="chk_1" value="yes">I agree to terms and condition
+            </div>
+            <div class="form_element">
+                <input type="submit" value="Submit" id="btn_submit"/>
+
+            </div>
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>

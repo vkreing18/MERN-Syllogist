@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Handling In Javascript</title>
+  </head>
+  <body>
+    <div class="form_container">
+      <div class="error_message" style="display: none"></div>
+      <form>
+        <div class="form_element">
+          <input type="text" id="full_name" />
+        </div>
+        <div class="form_element">
+          <select name="" id="course_name">
+            <option value="">Select Course</option>
+            <option value="MERN">MERN</option>
+            <option value="MEAN">MEAN</option>
+            <option value="MEVN">MEVN</option>
+          </select>
+        </div>
+        <div class="form_element">
+          <input type="radio"  id="shift_1"  name="shift"    value="Morning" />Morning
+          <input type="radio" id="shift_1"  name="shift" value="Evening" />Evening
+        </div>
+        <div class="form_element">
+          <textarea id="address" cols="40" rows="5"></textarea>
+        </div>
+        <div class="form_element">
+          <input type="checkbox" id="i_agree" value="yes" />I agree to term and
+          condition
+        </div>
+        <div class="form_element">
+            <input type="submit" id="btn_Register" value="Register">
+        </div>
+      </form>
+    </div>
+    <div>
+      Name:<span id="show_name"></span>
+    </div>
+    <script src="js/form.js"></script>
+  </body>
+</html>

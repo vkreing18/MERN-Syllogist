@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Of Integer</title>
+  </head>
+  <body>
+    <script>
+      let n = Number(prompt("Number of integer?"));
+      let arr = [];
+      for (let i = 0; i < n; i++) {
+        let input = Number(prompt(`Enter the ${i + 1}st element`));
+        arr.push(input);
+      }
+      console.log(arr);
+      let sum = 0;
+      for (let i = 0; i < n; i++) {
+        if (arr[i] > 0 && arr[i] % 2 == 0 && arr[i] % 3 == 0) {
+          sum = sum + arr[i];
+        }
+      }
+      console.log(
+        `Sum of Integer Which Are Positive and Even and are Multiple of 3 is= ` +
+          sum
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTRATION FORM</title>
+    <style type="text/css">
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(171, 194, 166);
+        }
+
+        input[type="text"] {
+            width: 250px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 77px;
+            height: 27px;
+            left: 180px;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        form {
+            text-align: left;
+            font-family: Georgia;
+            font-size: 20px;
+            width: 2500px;
+            margin: 20px auto;
+        }
+
+        td {
+            padding: 20px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td:last-child {
+            text-align: left;
+    </style>
+    <script>
+        function form_validation() {
+            var name = document.registration.name;
+            if (name.value.length <= 0) {
+                alert(" Name cannot be empty");
+                name.focus();
+                return false;
+            }
+            console.log(document.registration.name.value);
+            var email = document.registration.email;
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            console.log(document.registration.email.value);
+
+
+        
+            var gender = document.registration.gender;
+            if (gender.value.length <= 0) {
+                alert("Please Select the Gender");
+                gender.focus();
+                return false;
+            } 
+            console.log(document.registration.gender.value);
+
+            var mobile = document.registration.mobile;
+            if (mobile.value.length <10 || mobile.value.length>10) {
+                alert("Mobile number should 10 characters long");
+                mobile.focus();
+                return false;
+            }
+            console.log(document.registration.mobile.value);
+            var pin = document.registration.pin;
+            if (pin.value.length <= 0 || pin.value.length >7) {
+                alert("Pin Number Required or Pin Number should not exceed 7");
+                pin.focus();
+                return false;
+            }
+            console.log(document.registration.pin.value);
+
+           
+            var address = document.registration.address;
+            if (address.value.length <= 0) {
+                alert("Please enter relevant address");
+                address.focus();
+                return false;
+            }
+            console.log(document.registration.address.value);
+
+    
+
+        
+
+            
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>STUDENT DETAILS</h1>
+    </center>
+    <hr>
+    <form method="" action="" name="registration" onsubmit="return form_validation()">
+        <h2>FILL THE DETAILS</h2>
+        <table>
+            <tr>
+                <td><label>Name: </label></td>
+                <td>
+                    <input type="text" name="name" placeholder="Enter your name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="text" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Phone Number: </label></td>
+                <td>
+                    <input type="number" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td><label>PinCode: </label></td>
+                <td>
+                    <input type="number" name="pin">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" size="80" name="address" placeholder="Address of residence">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

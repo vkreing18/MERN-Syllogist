@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let n = Number(prompt("How many elements are there in the array?"));
+      let arr = [];
+      let arr_neg = [];
+      for (let i = 0; i < n; i++) {
+        let num = Number(prompt(`Enter the ${i + 1}st  element`));
+        arr.push(num);
+      }
+      console.log(arr);
+      for (let i = 0; i < n; i++) {
+        if (arr[i] < 0) {
+          arr_neg.push(arr[i]);
+        }
+      }
+      console.log(arr_neg);
+      let avg = function (arr_neg) {
+        let len = arr_neg.length;
+        let sum = 0;
+        for (let i = 0; i < len; i++) {
+          sum = sum + -1 * arr_neg[i];
+        }
+        return sum / len;
+      };
+      let avg_of_the_negative_numbers = avg(arr_neg);
+      console.log(
+        `Average  of the negative numbers is ${avg_of_the_negative_numbers}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "A Shopping Cart AUD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pravab Kar",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
